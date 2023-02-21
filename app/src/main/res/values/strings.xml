@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ThirstCare</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="et_email_hint">E-Mail Adresse</string>
+    <string name="et_drink_hint">Getränk</string>
+    <string name="et_passwort_hint">Passwort</string>
+    <string name="btn_login_text">Einloggen</string>
+    <string name="btn_register_text">Registrieren</string>
+    <string name="et_email_error">Geben Sie bitte eine gültige E-Mail Adresse ein</string>
+    <string name="et_passwort_error">Geben Sie bitte ein gültiges Passwort ein</string>
+    <string name="msg_login_succsess">Einloggen erfolgreich</string>
+    <string name="msg_reminder_verify">verifizieren Sie bitte die E-Mail Adresse</string>
+    <string name="item_reset_title">Passwort zurücksetzten</string>
+    <string name="et_pwreset_hint">E-Mail Adresse</string>
+    <string name="dialog_pwreset_title">Wollen Sie ihr Passwort zurücksetzen?</string>
+    <string name="dialog_pos">Zurücksetzen</string>
+    <string name="dialog_drink_pos">Speichern</string>
+    <string name="dialog_neg">Abbrechen</string>
+    <string name="msg_pwreset_fill_out">Bitte geben Sie Ihre E-Mail Adresse ein</string>
+    <string name="msg_pwreset_success">Ihnen wurde ein Link zum zurücksetzten gesendet</string>
+    <string name="msg_verify">Eine E-Mail zum verifizieren wird gesendet</string>
+    <string name="title_activity_test">test</string>
+    <string name="dialog_drink_title">Welches Getränk möchten Sie Speichern</string>
+    <string name="tv_target_txt">Tagesziel:</string>
+</resources>

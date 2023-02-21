@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237354051460",
+    "project_id": "thristcure",
+    "storage_bucket": "thristcure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237354051460:android:807bf7a2a44f7ca0825fd1",
+        "android_client_info": {
+          "package_name": "com.example.thirstcure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237354051460-vmsh52lkhor2115r2t6tvnf2uofp5j8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk61YnXVTQGHaFCzZV9RFDFSClJapeY0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237354051460-vmsh52lkhor2115r2t6tvnf2uofp5j8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
