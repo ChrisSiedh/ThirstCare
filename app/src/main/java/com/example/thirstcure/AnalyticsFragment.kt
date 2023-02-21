@@ -31,8 +31,8 @@ class AnalyticsFragment : Fragment(com.example.thirstcure.R.layout.fragment_anal
     private val mFirebaseAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
     private var db: FirebaseFirestore = FirebaseFirestore.getInstance()
 
-    lateinit var barChart: BarChart
-    lateinit var pieChart: PieChart
+    private lateinit var barChart: BarChart
+    private lateinit var pieChart: PieChart
 
     private var chartType = "bar"
 
@@ -171,7 +171,7 @@ class AnalyticsFragment : Fragment(com.example.thirstcure.R.layout.fragment_anal
 
 
     //Funktion zum abrufen der Daten für das Balkendiagramm
-    fun getBarData(startDate: String, endDate: String) {
+    private fun getBarData(startDate: String, endDate: String) {
 
         //Zeitraum erstellen
         val dateRange = getDateRange(startDate, endDate)
@@ -215,7 +215,7 @@ class AnalyticsFragment : Fragment(com.example.thirstcure.R.layout.fragment_anal
 
 
     //Funktion zum abrufen der Daten für das Kuchendiagramm
-    fun getPieData(startDate: String, endDate: String) {
+    private fun getPieData(startDate: String, endDate: String) {
 
         //Zeitraum erstellen
         val dateRange = getDateRange(startDate, endDate)
@@ -309,7 +309,7 @@ class AnalyticsFragment : Fragment(com.example.thirstcure.R.layout.fragment_anal
             val colors = mutableListOf<Int>()
 
             //Farben für jeden Eintrag zuweisen
-            for ((date, totalDrinkValue) in drinkValuesByDate) {
+            for ((_, totalDrinkValue) in drinkValuesByDate) {
                 val color = if (totalDrinkValue > limit) Color.BLUE else Color.RED
                 barEntries.add(BarEntry(i, totalDrinkValue.toFloat()))
                 colors.add(color)

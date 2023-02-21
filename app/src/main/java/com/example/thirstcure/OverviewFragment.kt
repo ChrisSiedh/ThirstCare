@@ -46,7 +46,7 @@ class OverviewFragment : Fragment() {
         loadDrinkData(date)
 
         //Datum auswählen
-        binding.calendarView.setOnDateChangeListener{ view, year , mounth , day ->
+        binding.calendarView.setOnDateChangeListener{ _, year, mounth, day ->
 
             date = (day.toString()+"."+(mounth+1).toString()+"."+year.toString())
 
@@ -91,7 +91,7 @@ class OverviewFragment : Fragment() {
                         fullval += drinkval.toInt()
                     }
                     //Gesamttrinkmenge setzen
-                    binding.textView6.setText((fullval.toString())+ " ml")
+                    binding.textView6.setText("$fullval ml")
                 } else {
                     // Log.d(TAG, "FEHLER: Daten lesen ", task.exception)
                 }

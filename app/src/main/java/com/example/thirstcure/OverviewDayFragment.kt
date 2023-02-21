@@ -35,7 +35,7 @@ class OverviewDayFragment : Fragment() {
     private lateinit var adapternewlist : ArrayAdapter<String>
     private lateinit var listView: ListView
 
-    lateinit var piechart:PieChart
+    private lateinit var piechart:PieChart
     private val pieList: ArrayList<PieEntry> = ArrayList()
     private var newdrinkval:Float = 0.0f
 
@@ -48,7 +48,7 @@ class OverviewDayFragment : Fragment() {
         // Binding-Objekt erstellen
         _binding = FragmentOverviewDayBinding.inflate(inflater, container, false)
         listView = binding.listData
-        list = ArrayList<String>()
+        list = ArrayList()
         adapter = ArrayAdapter(this.requireContext(), android.R.layout.simple_list_item_1, list)
         listView.adapter = adapter
         return binding.root
@@ -79,10 +79,8 @@ class OverviewDayFragment : Fragment() {
 
     //Funktion zum laden der Getränke
     private fun loadDrinks(currentDate:String) {
-
         //Firebase ID abrufen
         val uid = mFirebaseAuth.currentUser!!.uid
-
         //Getränke des Datums laden
         db.collection("user").document(uid).collection("userData").document(uid).collection(currentDate)
             .get()
@@ -108,9 +106,9 @@ class OverviewDayFragment : Fragment() {
                     val newlist: MutableList<String> = ArrayList()
                     //Schleife zum Abfragen aller Dokumente
                     for (document in task.result!!) {
-                        var drink = document.getString("drink")
+                        val drink = document.getString("drink")
                         val drinkvalue = document.getString("drinkValue")
-                        val drinkValue = (drink + " " + drinkvalue + " ml")
+                        val drinkValue = ("$drink $drinkvalue ml")
                         loadPieData(drink.toString(),uid,currentDate)
                         (newlist as ArrayList<String>).add(drinkValue)
                     }
@@ -144,7 +142,7 @@ class OverviewDayFragment : Fragment() {
 
                     //Prüfen ob Getränk bereits in der Liste ist
                     if (!pieList.any { it.label == Drink}){
-                        Log.d("test", Drink + " " + newdrinkval + " | ")
+                        Log.d("test", "$Drink $newdrinkval | ")
                         //Eintrag hinzufügen
                         pieList.add(PieEntry(newdrinkval,Drink))
                     }
