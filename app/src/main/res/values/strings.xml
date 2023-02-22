@@ -18,7 +18,7 @@
     <string name="et_passwort_error">Geben Sie bitte ein gültiges Passwort ein</string>
     <string name="msg_login_succsess">Einloggen erfolgreich</string>
     <string name="msg_reminder_verify">verifizieren Sie bitte die E-Mail Adresse</string>
-    <string name="item_reset_title">Passwort zurücksetzten</string>
+    <string name="item_reset_title">Passwort zurücksetzen</string>
     <string name="et_pwreset_hint">E-Mail Adresse</string>
     <string name="dialog_pwreset_title">Wollen Sie ihr Passwort zurücksetzen?</string>
     <string name="dialog_pos">Zurücksetzen</string>
