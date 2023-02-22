@@ -147,7 +147,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
 
     //Funktion für die Einrichtung von Benachrichtigungen
     private fun setNotifications() {
-
         //AlarmManager für Benachrichtigungen
         val alarmManager = requireActivity().getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
@@ -164,7 +163,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
             val notificationManager = requireActivity().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
-
         //Benachrichtigungen für jede Uhrzeit in der timeList einrichten
         for (timeString in timeList) {
 
@@ -178,7 +176,6 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                 set(Calendar.MINUTE, minute)
                 set(Calendar.SECOND, 0)
                 set(Calendar.MILLISECOND, 0)
-
                 if (timeInMillis <= System.currentTimeMillis()) {
                     add(Calendar.DAY_OF_MONTH, 1)
                 }
